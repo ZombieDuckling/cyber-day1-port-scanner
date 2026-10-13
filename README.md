@@ -38,6 +38,8 @@ permission.
 ## Project files
 
 - `port_scanner.py`: runnable scanner script
+- `tests/test_port_scanner.py`: characterization tests for parsing, scanning, and CLI behavior
+- `.github/workflows/ci.yml`: pull-request and `main` branch pytest workflow
 
 ## How to run
 
@@ -58,6 +60,16 @@ Optional timeout control:
 ```bash
 python3 port_scanner.py 127.0.0.1 -p 22,80,443 --timeout 1.0
 ```
+
+## Testing
+
+Install pytest in your preferred environment, then run:
+
+```bash
+python3 -m pytest -q
+```
+
+The GitHub Actions workflow runs the same test suite on Python 3.10 and 3.12 for pull requests and pushes to `main`.
 
 ## Expected output
 
